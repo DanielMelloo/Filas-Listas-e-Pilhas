@@ -77,7 +77,7 @@ void Queue::dequeue ()
         cout << "Elemento removido: " << firstEl();
         Node *tmp=head;
         
-        if (head==tail) // Se hÃ¡ apenas um nÃ³ na lista
+        if (head==tail) // Se há apenas um nó na lista
         {
             head=tail=0;
         }
@@ -115,8 +115,6 @@ void Queue::printQueue ()
         cout << "\n" << tmp->info;
     }
 }
-<<<<<<< HEAD
-=======
 
 int main ()
 {
