@@ -38,6 +38,11 @@ class Queue
         void printQueue ();
 };
 
+int main ()
+{
+    
+}
+
 void Queue::clearQ ()
 {
     Node *tmp=head;
@@ -55,7 +60,7 @@ void Queue::enqueue (int el)
 {
     if (tail!=0)
     {
-        // Se a lsita não estiver vazia
+        // Se a lista não estiver vazia
         tail->next=new Node (el);
         tail=tail->next;
     }
@@ -109,9 +114,4 @@ void Queue::printQueue ()
     {
         cout << "\n" << tmp->info;
     }
-}
-
-int main ()
-{
-    
 }

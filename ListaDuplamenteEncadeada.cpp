@@ -24,15 +24,11 @@ class Lista
     private:
         Node *head;
         Node *tail;
-        int qtd_el;
 
     public:
-        int* qtd_el_p=&qtd_el;
-
         Lista()
         {
             head=tail=0;
-            qtd_el=0;
         }
         // ~Lista();
         int isEmpty()
@@ -58,13 +54,17 @@ class Lista
         int QtdElementos ();
 };
 
+int main ()
+{
+    
+}
+
 void Lista::AddToHead (int el)
 {
     head = new Node (el, head);
     if (tail == 0)
     {
         tail=head;
-        qtd_el++;
     }
 }
 
@@ -74,12 +74,10 @@ void Lista::AddToTail (int el)
     {
         tail->next=new Node (el);
         tail = tail->next;
-        qtd_el++;
     }
     else 
     {
         head = tail = new Node (el);
-        qtd_el++;
     }
 }
 
@@ -100,8 +98,6 @@ void Lista::AddToAny (const int& num_el, const int& el) // >=2 elementos
     {
         tail=tmp->next;
     }
-
-    qtd_el++;
 
 }
 
@@ -283,60 +279,8 @@ void Lista::PrintLista()
 
 int Lista::QtdElementos ()
 {
-    // int i=0;
-    // for (Node *p = head;p != NULL;p = p->next, i++);
+    int i=0;
+    for (Node *p = head;p != NULL;p = p->next, i++);
     
-    return qtd_el;
+    return i;
 }
-
-int main ()
-{
-    Lista l1, l2;
-
-    int ma=10, me=20, qtd_el;
-    float media;
-
-    l1.MaiorMenor (ma, me);
-
-    // cout << "Maior=" << ma << endl;
-    // cout << "Menor=" << me << endl;
-
-    l1.AddToHead(ma);
-    l1.AddToHead(me);
-
-    l2.AddToHead(50);
-    l2.AddToHead(40);
-
-    media=l1.Media ();
-    
-    // cout << "Media=" << media << "\n\n";
-
-    // cout << "Lista 1.1" << "\n\n";
-    // l1.PrintLista();
-
-    l1.Concatena(l2);
-
-    cout << "Lista 1.2" << "\n\n";
-    l1.PrintLista ();
-
-    // cout << "Qtd de Elementos Lista 1:\n" << l1.QtdElementos() << "\n\n";
-
-    // qtd_el=l1.QtdElementos();
-
-    // cout << "Qtd de Elementos Lista 2:\n" << l2.QtdElementos() << "\n\n";
-
-    // l1.DeleteNodeV (10);
-
-    // l1.PrintLista();
-
-    // if (l1.isInLista (20) == true)
-    // {
-    //     cout << "true";
-    // }
-
-    l1.AddToCenter (4, 75);
-
-    cout << "Lista 1.3" << "\n\n";
-    l1.PrintLista ();
-}
-

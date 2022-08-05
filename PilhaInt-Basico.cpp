@@ -43,6 +43,12 @@ class stack
         bool comparaPilhas (stack*, stack*);
 };
 
+int main ()
+{
+    stack p1, p2, p3;
+
+}
+
 void stack::clear()
 {
     Node *tmp=head;
@@ -198,10 +204,3 @@ bool stack::comparaPilhas (stack *pa, stack *pb)
 
     return true;
 }
-
-int main ()
-{
-    stack p1, p2, p3;
-
-}
-

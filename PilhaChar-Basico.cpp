@@ -10,7 +10,6 @@ void testedecodigo ()
 class Node
 {
     public:
-        // int info;
         char info;
         Node *next;
 
@@ -37,7 +36,7 @@ class stack
         void pop ();
         char popEl();
         void printstack();
-        void preenchePilha (const int&); //ta errado
+        void preenchePilha (const int&);
         stack inverteElementos ();
         bool comparaPilhas (stack*, stack*);
         stack iguala ();
