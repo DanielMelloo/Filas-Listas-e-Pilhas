@@ -55,7 +55,7 @@ void Queue::enqueue (int el)
 {
     if (tail!=0)
     {
-        // Se a lsita não estiver vazia
+        // Se a lista nÃ£o estiver vazia
         tail->next=new Node (el);
         tail=tail->next;
     }
@@ -72,7 +72,7 @@ void Queue::dequeue ()
         cout << "Elemento removido: " << firstEl();
         Node *tmp=head;
         
-        if (head==tail) // Se há apenas um nó na lista
+        if (head==tail) // Se hÃ¡ apenas um nÃ³ na lista
         {
             head=tail=0;
         }
